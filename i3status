@@ -11,9 +11,10 @@ general {
         interval = 5
 }
 
-order += "disk /"
 order += "wireless wlp4s0"
 order += "ethernet eth0"
+order += "disk /"
+order += "disk /mnt/storage"
 order += "battery 0"
 order += "load"
 order += "tztime local"
@@ -42,5 +43,9 @@ load {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "Root: %avail"
+}
+
+disk "/mnt/storage" {
+	format = "Storage: %avail"
 }
