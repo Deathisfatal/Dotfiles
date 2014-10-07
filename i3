@@ -27,7 +27,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -152,7 +152,10 @@ bar {
         status_command i3status
 }
 
-for_window [class="^Chrome$" title=" - Google Chrome$"] border none
+for_window [class="Google-chrome" title="Google Chrome"] border none
 
 exec nm-applet
 bindsym Mod4+l exec i3lock
+exec blueman-applet
+
+exec dropboxd
