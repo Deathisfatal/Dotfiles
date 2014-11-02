@@ -164,4 +164,6 @@ bindsym $mod+x exec /usr/local/bin/i3swap
 exec --no-startup-id /usr/local/bin/arotate
 exec --no-startup-id /usr/local/bin/configDisplays
 exec --no-startup-id mpd
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
+exec --no-startup-id /usr/local/bin/penprox
+#exec cellwriter --keyboard-only --window-x=512 --window-y=768
