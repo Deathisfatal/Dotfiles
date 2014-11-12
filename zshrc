@@ -378,3 +378,5 @@ if [[ $LANG == "C"  || $LANG == "" ]]; then
 problems.$reset_color"
 fi
 
+setopt nohashdirs
+
