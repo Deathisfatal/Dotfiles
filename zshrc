@@ -28,14 +28,14 @@ else
  		_usercol="$fg[cyan]"
 	fi
 	local _user="%{$_usercol%}%n@%M"
+        if [[ ! -z "$SSH_CLIENT" ]]; then
+                _user="$_user [SSH]" # ssh icon
+        fi
 	local _prompt="%{$fg[white]%}${(r:$SHLVL*2::%#:)}"
 
 	PROMPT="$_time $_user $_path $_prompt%b%f%k "
 
 	RPROMPT='${vcs_info_msg_0_}' # git branch
-	if [[ ! -z "$SSH_CLIENT" ]]; then
-		RPROMPT="$RPROMPT ⇄" # ssh icon
-	fi
 fi
 
 ##
@@ -377,6 +377,7 @@ if [[ $LANG == "C"  || $LANG == "" ]]; then
 	>&2 echo "$fg[red]The \$LANG variable is not set. This can cause a lot of 
 problems.$reset_color"
 fi
+
 
 setopt nohashdirs
 
