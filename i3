@@ -73,9 +73,9 @@ bindsym $mod+Shift+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -168,7 +168,7 @@ exec --no-startup-id mpd
 exec --no-startup-id /usr/local/bin/penprox
 #exec cellwriter --keyboard-only --window-x=512 --window-y=768
 exec --no-startup-id xflux -l 51.51N -g 7.47E -k 4500
-exec --no-startup-id powertop --auto-tune
+exec --no-startup-id sudo powertop --auto-tune
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
@@ -184,4 +184,9 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+
+bindsym $mod+c exec google-chrome-stable
+
+bindsym $mod+w exec invert
 
