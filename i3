@@ -190,3 +190,4 @@ bindsym $mod+c exec google-chrome-stable
 
 bindsym $mod+w exec invert
 
+bindsym $mod+n exec nautilus
