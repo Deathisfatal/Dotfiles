@@ -188,7 +188,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 
-bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec google-chrome-beta
 
 bindsym $mod+w exec invert
 
