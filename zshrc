@@ -381,3 +381,5 @@ fi
 
 setopt nohashdirs
 
+unset SSH_ASKPASS 
+
