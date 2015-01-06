@@ -193,3 +193,5 @@ bindsym $mod+c exec google-chrome-stable
 bindsym $mod+w exec invert
 
 bindsym $mod+n exec nautilus
+
+exec --no-startup-id redshift -l 51.513587:7.465298 
