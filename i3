@@ -153,6 +153,8 @@ bar {
 }
 
 for_window [class="Google-chrome" title="Google Chrome"] border none
+for_window [title="Mozilla Firefox"] border none
+for_window [title="Telegram Web"] border none
 
 exec nm-applet
 bindsym Mod4+l exec i3lock
