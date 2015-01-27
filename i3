@@ -27,7 +27,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec lxterminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -155,6 +155,7 @@ bar {
 for_window [class="Google-chrome" title="Google Chrome"] border none
 for_window [title="Mozilla Firefox"] border none
 for_window [title="Telegram Web"] border none
+for_window [title="urxvt"] border none
 
 exec nm-applet
 bindsym Mod4+l exec i3lock
