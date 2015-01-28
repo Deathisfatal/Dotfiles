@@ -27,7 +27,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -196,3 +196,5 @@ bindsym $mod+w exec invert
 bindsym $mod+n exec nautilus
 
 exec --no-startup-id redshift -l 51.513587:7.465298 
+exec --no-startup-id urxvtd -o -q
+

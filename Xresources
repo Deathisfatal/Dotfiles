@@ -7,7 +7,7 @@ Xft.hinting:    true
 Xft.hintstyle:  hinting
 URxvt.font:xft:Droid Sans Mono:pixelsize=15
 URxvt.letterSpace: -1
-URxvt.perl-ext-common: default,matcher,tabbed,vtwheel,clipboard
+URxvt.perl-ext-common: default,matcher,tabbed,vtwheel,clipboard,keyboard-select
 URxvt.url-launcher: /usr/bin/google-chrome-beta
 URxvt.matcher.button: 1!
 URxvt.colorUL: #4682B4
@@ -17,32 +17,25 @@ URxvt.tabbed.tab-fg: 3
 URxvt.tabbed.tab-bg: 0
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
-
-! Google Material Design
-*background 		: #061218
+*background 		: #162228
 *foreground 		: #eceff1
-! black
 *color0  			: #263238
 *color8  			: #37474f
-! red
 *color1  			: #ff9800
 *color9  			: #ffa74d
-! green
 *color2  			: #8bc34a
 *color10 			: #9ccc65
-! yellow
 *color3  			: #ffc107
 *color11 			: #ffa000
-! blue
 *color4  			: #03a9f4
 *color12 			: #81d4fa
-! magenta
 *color5  			: #e91e63
 *color13 			: #ad1457
-! cyan
 *color6  			: #009688
 *color14 			: #26a69a
-! white
 *color7  			: #cfd8dc
 *color15 			: #eceff1
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
 
