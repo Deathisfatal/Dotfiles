@@ -197,5 +197,7 @@ bindsym $mod+n exec nautilus
 
 exec --no-startup-id redshift -l 51.513587:7.465298 
 exec --no-startup-id urxvtd -o -q
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id xsetroot -solid "#000000"
+exec --no-startup-id compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config=/home/isaac/.config/compton/compton.conf                                                                                                                                                                 
 

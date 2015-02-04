@@ -19,4 +19,6 @@ set shiftwidth=4
 set softtabstop=4
 set smarttab
 set expandtab
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                " turn off YCM
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>                "turn on YCM
 

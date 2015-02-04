@@ -1,10 +1,10 @@
 URxvt.scrollstyle: plain
 URxvt*scrollBar_right: true
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgba
-Xft.hinting:    true
-Xft.hintstyle:  hinting
+#Xft.dpi:        96
+#Xft.antialias:  true
+#Xft.rgba:       rgba
+#Xft.hinting:    true
+#Xft.hintstyle:  hinting
 URxvt.font:xft:Droid Sans Mono:pixelsize=15
 URxvt.letterSpace: -1
 URxvt.perl-ext-common: default,matcher,tabbed,vtwheel,clipboard,keyboard-select
