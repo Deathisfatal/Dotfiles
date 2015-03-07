@@ -164,13 +164,8 @@ exec blueman-applet
 exec dropboxd
 bindsym $mod+x exec /usr/local/bin/i3swap
 
-#exec --no-startup-id /usr/local/bin/arotate
-#exec --no-startup-id /usr/local/bin/configDisplays
 exec --no-startup-id mpd
-#exec --no-startup-id nitrogen --restore
 exec --no-startup-id /usr/local/bin/penprox
-#exec cellwriter --keyboard-only --window-x=512 --window-y=768
-exec --no-startup-id xflux -l 51.51N -g 7.47E -k 4500
 exec --no-startup-id sudo powertop --auto-tune
 
 # Pulse Audio controls
@@ -179,8 +174,8 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5% #decrease sound
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -195,9 +190,11 @@ bindsym $mod+w exec invert
 
 bindsym $mod+n exec nautilus
 
-exec --no-startup-id redshift -l 51.513587:7.465298 
+exec --no-startup-id redshift -l -37.8187:144.963 
 exec --no-startup-id urxvtd -o -q
 #exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id xsetroot -solid "#000000"
-exec --no-startup-id compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config=/home/isaac/.config/compton/compton.conf                                                                                                                                                                 
+exec --no-startup-id compton --backend glx --unredir-if-possible --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config=/home/isaac/.config/compton/compton.conf                                                                                                                                                                 
+exec seafile-applet
+exec --no-startup-id kmnotify
 

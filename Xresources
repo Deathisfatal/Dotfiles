@@ -35,6 +35,8 @@ URxvt.iso14755: False
 *color14 			: #26a69a
 *color7  			: #cfd8dc
 *color15 			: #eceff1
+# scrollback buffer lines - 65535 is max on most machines (64 is default)
+URxvt*saveLines: 65535
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
