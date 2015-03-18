@@ -150,6 +150,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	font pango: Inconsolata 9
 }
 
 for_window [class="Google-chrome" title="Google Chrome"] border none
@@ -197,4 +198,6 @@ exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id compton --backend glx --unredir-if-possible --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config=/home/isaac/.config/compton/compton.conf                                                                                                                                                                 
 exec seafile-applet
 exec --no-startup-id kmnotify
+
+exec --no-startup-id xrandr --output HDMI-0 --left-of DVI-1
 
