@@ -1,10 +1,5 @@
 URxvt.scrollstyle: plain
 URxvt*scrollBar_right: true
-#Xft.dpi:        96
-#Xft.antialias:  true
-#Xft.rgba:       rgba
-#Xft.hinting:    true
-#Xft.hintstyle:  hinting
 URxvt.font:xft:Droid Sans Mono:pixelsize=15
 URxvt.letterSpace: -1
 URxvt.perl-ext-common: default,matcher,tabbed,vtwheel,clipboard,keyboard-select
@@ -17,25 +12,24 @@ URxvt.tabbed.tab-fg: 3
 URxvt.tabbed.tab-bg: 0
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
-*background 		: #162228
-*foreground 		: #eceff1
-*color0  			: #263238
-*color8  			: #37474f
-*color1  			: #ff9800
-*color9  			: #ffa74d
-*color2  			: #8bc34a
-*color10 			: #9ccc65
-*color3  			: #ffc107
-*color11 			: #ffa000
-*color4  			: #03a9f4
-*color12 			: #81d4fa
-*color5  			: #e91e63
-*color13 			: #ad1457
-*color6  			: #009688
-*color14 			: #26a69a
-*color7  			: #cfd8dc
-*color15 			: #eceff1
-# scrollback buffer lines - 65535 is max on most machines (64 is default)
+URxvt*background: #162228
+URxvt*foreground: #eceff1
+URxvt*color0: #263238
+URxvt*color8: #37474f
+URxvt*color1: #ff9800
+URxvt*color9: #ffa74d
+URxvt*color2: #8bc34a
+URxvt*color10: #9ccc65
+URxvt*color3: #ffc107
+URxvt*color11: #ffa000
+URxvt*color4: #03a9f4
+URxvt*color12: #81d4fa
+URxvt*color5: #e91e63
+URxvt*color13: #ad1457
+URxvt*color6: #009688
+URxvt*color14: #26a69a
+URxvt*color7: #cfd8dc
+URxvt*color15: #eceff1
 URxvt*saveLines: 65535
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate

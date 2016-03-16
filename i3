@@ -33,7 +33,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -i"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -150,27 +150,31 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        font pango:Roboto Mono 8 
 }
 
-for_window [class="Google-chrome" title="Google Chrome"] border none
+for_window [title="Lautstärkeregler"] floating enable
+for_window [title="Google Chrome"] border none
 for_window [title="Mozilla Firefox"] border none
 for_window [title="Telegram Web"] border none
 for_window [title="urxvt"] border none
+for_window [title="Sublime Text"] border none
+for_window [title="Oracle VM VirtualBox"] border none
 
 exec nm-applet
 bindsym Mod4+l exec i3lock
 exec blueman-applet
 
-exec dropboxd
+exec dropbox start
 bindsym $mod+x exec /usr/local/bin/i3swap
 
 exec --no-startup-id mpd
 exec --no-startup-id /usr/local/bin/penprox
-exec --no-startup-id sudo powertop --auto-tune
+exec --no-startup-id sudo /usr/sbin/powertop --auto-tune
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5% #decrease sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
@@ -183,18 +187,26 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+bindsym $mod+Shift+p exec systemctl suspend
 
-bindsym $mod+c exec google-chrome-beta
+bindsym $mod+c exec google-chrome --force-device-scale-factor=1
 
 bindsym $mod+w exec invert
 
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec pcmanfm
 
-exec --no-startup-id redshift -l -37.8187:144.963 
+exec --no-startup-id redshift -l 50.95:6.69 
 exec --no-startup-id urxvtd -o -q
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id /usr/libexec/gnome-settings-daemon
 exec --no-startup-id xsetroot -solid "#000000"
-exec --no-startup-id compton --backend glx --unredir-if-possible --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config=/home/isaac/.config/compton/compton.conf                                                                                                                                                                 
+#exec --no-startup-id compton --backend glx --unredir-if-possible --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config=/home/isaac/.config/compton/compton.conf                                                                                                                                                                 
 exec seafile-applet
 exec --no-startup-id kmnotify
+exec --no-startup-id pulseaudio -D
+bindsym $mod+p exec pavucontrol
 
+bindsym $mod+z exec google-chrome --app-id=clhhggbfdinjmjhajaheehoeibfljjno
+
+bindsym $mod+e --release exec sc
+exec xset -dpms
+exec xset s off   

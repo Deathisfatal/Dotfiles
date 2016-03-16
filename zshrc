@@ -383,3 +383,6 @@ setopt nohashdirs
 
 unset SSH_ASKPASS 
 
+
+export PATH="$PATH:/home/isaac/Apps/go_appengine"
+alias cow="cp --reflink=always"
