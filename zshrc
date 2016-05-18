@@ -31,7 +31,7 @@ else
         if [[ ! -z "$SSH_CLIENT" ]]; then
                 _user="$_user [SSH]" # ssh icon
         fi
-	local _prompt="%{$fg[white]%}${(r:$SHLVL*2::%#:)}"
+	local _prompt="%{$fg[grey]%}${(r:$SHLVL*2::%#:)}"
 
 	PROMPT="$_time $_user $_path $_prompt%b%f%k "
 
@@ -386,3 +386,5 @@ unset SSH_ASKPASS
 
 export PATH="$PATH:/home/isaac/Apps/go_appengine"
 alias cow="cp --reflink=always"
+alias docker-rmi="docker rmi \$(docker images -q --filter \"dangling=true\")"
+alias docker-rm="docker rm \$(docker ps -a -q)"

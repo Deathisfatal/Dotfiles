@@ -3,8 +3,9 @@ filetype off
 syntax on
 filetype plugin indent on
 set number
-
+set relativenumber
 nmap <F8> :TagbarToggle<CR>
+set t_Co=256
 
 
 set grepprg=grep\ -nH\ $*
@@ -21,4 +22,4 @@ set smarttab
 set expandtab
 nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                " turn off YCM
 nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>                "turn on YCM
-
+set pastetoggle=<F10>
