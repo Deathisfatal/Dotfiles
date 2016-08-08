@@ -36,16 +36,16 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -76,7 +76,7 @@ for_window [title="Oracle VM VirtualBox"] border none
 exec nm-applet
 bindsym $mod+l exec /usr/local/bin/i3lock.sh
 exec blueman-applet
-exec dropbox start
+#exec dropbox start
 bindsym $mod+x exec /usr/local/bin/i3swap
 exec --no-startup-id sudo /usr/sbin/powertop --auto-tune
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% 
@@ -95,7 +95,7 @@ bindsym $mod+n exec pcmanfm
 exec --no-startup-id redshift -l 50.95:6.69 
 exec --no-startup-id urxvtd -o -q
 exec --no-startup-id /usr/libexec/gnome-settings-daemon
-exec --no-startup-id xsetroot -solid "
+exec --no-startup-id xsetroot -solid black
 exec seafile-applet
 exec --no-startup-id kmnotify
 exec --no-startup-id pulseaudio -D
